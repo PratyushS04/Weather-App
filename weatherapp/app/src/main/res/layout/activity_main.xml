@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_2"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#510357"
+        android:text="Weather Update"
+        android:textSize="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etcity"
+            android:layout_width="302dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter city name "
+
+            android:textColor="@color/white"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etcounty"
+            android:layout_width="302dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter country code (optional)"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@null"
+            android:onClick="getWeatherDetails"
+            android:text="get"
+         />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="422dp">
+
+            <TextView
+                android:id="@+id/tvresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text=" "
+                android:textColor="#7c0485"
+                android:textSize="20dp" />
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
